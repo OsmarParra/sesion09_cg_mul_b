@@ -42,14 +42,14 @@ function init() {
     var arrCube = [];
     var t = 2;
     for (var i = 0; i < 3; i++){
-        arrCube.push(cubo(t, t, t, t/2, (t/2)+(t*i), t/2, 'Basic', 'green', true));
+        arrCube.push(cubo(t, t, t, (t/2) +(t*i), (t/2)+(t*i), t/2, 'Basic', 'green', true));
     }
 
     const axesHelper = new THREE.AxesHelper( 10 );
     scene.add(axesHelper);
 
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100);
-    camera.position.set(6, 6, 6);
+    camera = new THREE.PerspectiveCamera(115, window.innerWidth / window.innerHeight, 0.1, 100);
+    camera.position.set(0, 6, 6);
     camera.lookAt(arrCube[2].position);
 
     clock = new THREE.Clock();
